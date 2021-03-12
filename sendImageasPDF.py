@@ -58,4 +58,8 @@ if __name__ == '__main__':
         print('Please Install Required Package')
         f.write('logged')
     else:
-        send_email_right_now()
+        ask = input("Y: Only Convert to PDF N: Convert and Mail (Y/N): ").lower()
+        if ask == 'n':
+            send_email_right_now()
+        else:
+            convert2pdf(input("Enter name of PDF: "))
